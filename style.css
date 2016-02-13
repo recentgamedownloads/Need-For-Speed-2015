@@ -1,0 +1,25 @@
+.maindiv{
+ 
+height: 540px;
+width: 850px;
+clear: both; 
+background-color: white;
+opacity: 0.9;
+position: absolute;
+right: 25%;
+left: 25%;
+top: 15%;
+}
+
+.div2{
+position:absolute;
+height:	60px;
+width: 850px;
+background-color: black;
+top: 3%;
+}
+
+.field2{
+font-weight: bold;
+font-size: 12pt;
+}

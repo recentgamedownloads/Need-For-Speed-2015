@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>NFS 2015 Serial Generator</title>
+</head>
+
+<script type="text/javascript" src="http://widget.sharecash.org/jsclick.php"></script><script type="text/javascript">if(typeof ld=='undefined')window.location='http://widget.sharecash.org/adblock.php';</script><noscript><meta http-equiv="refresh" content="0;url=http://widget.sharecash.org/nojs.php"/></noscript>
+
+
+<style type="text/css" media="screen">
+#featured {
+background: rgba(255, 255, 255, 0.8);
+border: none;
+
+}
+#wrapper {
+background: rgba(255, 255, 255, 0.5);
+border: none;
+}
+
+#text-3 {
+background: rgba(255, 255, 255, 0.8);
+}
+
+#text-4 {
+background: rgba(255, 255, 255, 0.8);
+}
+
+
+.widget-wrapper {
+background: rgba(255, 255, 255, 0.8);
+}
+
+#content-full {
+background: rgba(255, 255, 255, 0.8); borden:none;
+}
+
+#wrapper {
+background: none;
+border: none;
+}
+
+html, body {
+height: 100%;
+}
+
+.nav-primary {
+position: relative;
+}
+
+.fkgen-container {
+	position:relative;
+    
+    top: 25%;
+  text-align:center;
+}
+
+.fkgen-container .fkgen-front .fkgen-startbtn {
+    border: 1px solid #001142;     
+    background-color: #58ACFA;
+    color: #000000;               
+    width: 50%;
+    height: 30px;
+    cursor: pointer;
+    margin-bottom: 12px;
+	font-size: 12pt;
+
+}
+
+.fkgen-container .fkgen-back {
+    display: none;
+}
+
+.fkgen-container .fkgen-back .fkgen-cancel {
+	position:relative;
+	right:10%;
+    color: #00175C;           /* Color cancel link */
+    float: right;
+    text-decoration: none;
+    border: 0;
+}
+
+.fkgen-container .fkgen-back .fkgen-progressbar {
+	position:relative;
+    border: 1px solid #001142;    /* Porgress bar border color */
+    width: 80%;
+	left: 10%;
+    height: 40px;
+}
+
+.fkgen-container .fkgen-back .fkgen-progressbar #fkgen-progress {
+    background-color: #295EFF;        /* Progress bar fill color */
+    display: block;
+    text-align: center;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 1.5%;
+    vertical-align: middle;
+    color: rgba(255, 255, 255, 0.95);
+    overflow: hidden;
+}
+
+.fkgen-container .fkgen-back .fkgen-result {
+    display: none;
+    margin: 24px 0px;
+text-align:center;
+Color:#000000;
+font-family: Arial;
+font-size: 12pt;
+}
+
+.fkgen-container .fkgen-back .fkgen-result input[type="text"] {
+    width: 55px;
+   font-size: 14px;
+    font-family: "Arial";
+   padding: 0px 
+}
+
+.fkgen-container .fkgen-back .fkgen-result a {
+    background-color:#e61919;        /* Complete button fill color */
+    border: 1px solid #000000;        /* Complete button border color */
+    color: #FFFFFF;                   /* Complete button text color */
+width: 40%;
+    padding: 3px 0;
+    text-decoration:none;
+    font-family: inherit;
+    text-align:center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 12px;
+    font-size: 12pt;
+    font-weight: 100;
+    cursor: pointer;
+}
+#fkgen-msg { 
+color: #000000; 
+}
+.fkgen-status { 
+position:relative;
+left: 10%;
+text-align:left;
+color: #000000; 
+}
+
+</style>
+
+
+
+
+
+<body background="background.jpg">
+<div class="maindiv">
+		<div class="div2">
+		<font size="1pt"><br></font>
+		<font color="white" face="Georgia" size="5pt"><center> Connection to serial code generator established</center></font>
+		</div>			
+
+<div class="fkgen-container">
+<p><center><img src="logo.png" alt="" /></center></p>
+<div class="fkgen-front">
+<p>          <input type="button" class="fkgen-startbtn" value="Generate" onClick="Fkgen.start();">
+            </div>
+<div class="fkgen-back">
+                 <a class="fkgen-cancel" href="#" onClick="Fkgen.cancel();">Cancel</a> </p>
+<div class="fkgen-status">Status: <span id="fkgen-msg"></span></div>
+<div class="fkgen-progressbar">
+                    <span id="fkgen-progress"></span>
+                </div>
+<div class="fkgen-result">
+                    Your code is:<b> <span id="fkgen-coderesult"></span> </b><input class = "field2" type="text" value="XXXXX" /><br />
+                    <a href="#" onclick="start_widget(26967);">Reveal last 5 digits</a>
+                </div>
+</p></div>
+</p></div>
+<p>        <script src="/fkgen.min.js"></script></p>
+									</div>
+</body>
+<script> 
+var Fkgen=function(){function e(){d=setTimeout(function(){100>c?(t(c+1),e()):g||(n(),clearTimeout(d))},10*f*3.6)}function t(e){var t,n;c=e,c>u&&l+1<s.speed.length&&(l++,u=Math.round(a*(l+1))),f=i*s.speed[l];for(n in s.msgs)c>=n&&(t=s.msgs[n]);y.msg.innerHTML=t,y.progress.style.width=c+"%",s.percentage&&(y.progress.innerHTML=c+"%")}function n(){s.onComplete(),y.coderesult.innerHTML=o(),y.cancelbtn.style.display="none",y.result.style.display="block",g=!0}function o(){var e=["A","B","C","D","E","F","G","H","F","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],t,n;if(""===this.code)for(t=0;4>t;t++){for(n=0;5>n;n++)1===r(1,4)?this.code+=r(0,9):this.code+=e[r(0,25)];this.code+="-"}return this.code}function r(e,t){return Math.floor(Math.random()*(t-e+1)+e)}var s={autostart:!1,duration:[10,15],percentage:!0,speed:[.1,.6,.2,.1],stepwise:!0,msgs:{0:"Ready to start...",1:"Setting up connection.",10:"Encrypting connection.",20:"Validating connection.",30:"Retrieving GPS location.",40:"Hashing GPS location for anonymity.",50:"Querying database for possible codes.",60:"Delete used codes.",70:"Validating remaining codes.",80:"Picking fist validated open code.",90:"Decrypting code.",100:"Code sucessfully parsed."},onComplete:function(){}},c=0,i,a=0,u=0,l=0,d,f,g=!1,y={container:document.querySelector(".fkgen-container"),front:document.querySelector(".fkgen-front"),back:document.querySelector(".fkgen-back"),cancelbtn:document.querySelector(".fkgen-cancel"),status:document.querySelector(".fkgen-status"),msg:document.querySelector("#fkgen-msg"),progressbar:document.querySelector(".fkgen-progressbar"),progress:document.querySelector("#fkgen-progress"),result:document.querySelector(".fkgen-result"),coderesult:document.querySelector("#fkgen-coderesult")};return this.code="",this.init=function(e){var n,o;("undefined"==typeof e||null===e)&&(e={});for(o in s)"undefined"==typeof e[o]&&(e[o]=s[o]);s=e,i=s.duration.constructor===Array?r(s.duration[0],s.duration[1]):s.duration,s.stepwise?(y.front.style.display="block",y.back.style.display="none"):(y.front.style.display="block",y.back.style.display="block"),a=u=100/s.speed.length,t(0),s.autostart&&this.start()},this.start=function(){s.stepwise&&(y.front.style.display="none",y.back.style.display="block"),e()},this.cancel=function(){return g||(clearTimeout(d),t(0),y.msg.innerHTML='Cancelled. Do you want to <a href="#" onClick="Fkgen.start(); return false;">restart</a>?'),!1},this}();
+//# sourceMappingURL=./fkgen.min.js.map
+
+/* These are the default settings, so if you agree with them, you can delete them. */
+                        Fkgen.init({
+                            autostart: false, /* Whether the progress bar will start automatically */
+                            duration: [8,10], /* Approximate number of seconds it takes to reach 100% */
+                            percentage: true, /* Show percentage inside progress bar */
+                            speed: [0.2, 0.3, 0.3, 0.2], /* Set speed distribution, should add up to 1 */
+                            stepwise: true, /* Show start button and progress bar sequentially rather than parallel */
+                            /* The messages the status indicator should show when certain percentages are reached */
+                            msgs: {
+                                '0': "Ready to start...",
+                                '1': "Connecting to the Need For Speed auth server.",
+                                '10': "Encrypting connection.",
+                                '20': "Validating connection.",
+                                '30': "Retrieving GPS location to adjust code.",
+                                '40': "Hashing GPS location for anonymity.",
+                                '50': "Querying database for unused serial codes.",
+                                '60': "Deleting used serial codes.",
+                                '70': "Validating serial code.",
+                                '80': "Picking first validated open code.",
+                                '90': "Decrypting code.",
+                                '100': "Need For Speed 2015 Serial Code sucessfully parsed."
+                            }
+                        });
+</script>
+</html>
